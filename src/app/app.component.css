@@ -1,0 +1,14 @@
+.header {
+  height: 105px;
+  width: 100vw;
+  background: #262623;
+  box-shadow: 1px 2px 4px 1px #808080;
+  position: fixed;
+  z-index: 10;
+  display: grid;
+}
+.header img {
+  justify-self: center;
+}
+
+/*# sourceMappingURL=app.component.css.map */

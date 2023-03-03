@@ -1,0 +1,34 @@
+<div class="main">
+  <div class="nav-wrap">
+    <div class="search">
+      <input type="search" [(ngModel)]="searchText">
+      <button (click)="searching=true; getDefault()">Search</button>
+      <button (click)="searchText='';scrolling=true; getDefault()">Reset</button>
+    </div>
+
+    <app-navigation
+      (getFilter)="filtering=true; getDefault()"
+    ></app-navigation>
+
+  </div>
+
+  <div class="list"
+       infinite-scroll
+       [infiniteScrollDistance]="distance"
+       [infiniteScrollThrottle]="throttle"
+       (scrolled)="scrolling=true; onScroll()">
+
+    <div class="item" *ngFor="let chr of characters; index as i">
+      <div class="avatar-img">
+        <img src="{{chr.image}}" alt="avatar">
+      </div>
+      <div class="name" [routerLink]="['/character', chr.id]">
+        {{chr.name}}
+      </div>
+      <div class="gender">
+        {{chr.gender}}
+      </div>
+    </div>
+
+  </div>
+</div>

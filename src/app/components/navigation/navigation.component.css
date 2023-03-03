@@ -1,0 +1,41 @@
+.nav-component {
+  display: grid;
+  row-gap: 10px;
+}
+
+.species-select {
+  margin-left: 30px;
+  display: grid;
+}
+.species-select span {
+  color: #000000;
+  width: 13vw;
+  border-radius: 5px;
+  background-color: #c6bb85;
+}
+.species-select select {
+  display: inline-block;
+  width: 13vw;
+  height: 30px;
+  font-size: 20px;
+  color: #333333;
+  padding: 0 5px 0 5px;
+  border-radius: 3px;
+}
+
+.button {
+  display: grid;
+}
+.button button {
+  justify-self: center;
+  width: 5vw;
+  margin: 5px 5px 0 5px;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.button button:hover {
+  border: grey solid 1px;
+}
+
+/*# sourceMappingURL=navigation.component.css.map */

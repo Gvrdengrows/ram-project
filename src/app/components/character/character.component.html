@@ -1,0 +1,40 @@
+<div>
+  <h2 *ngIf="loading">Loading...</h2>
+  <div class="chr-wrap" *ngIf="!loading">
+    <div class="back" routerLink="/">
+      <span>Назад</span>
+    </div>
+
+    <div class="img">
+      <img src="{{data.image}}" alt="character">
+    </div>
+
+    <div class="information">
+      <div class="info-item">
+        <div>Name: <span>{{data.name}}</span></div>
+      </div>
+      <div class="info-item">
+        <div>Status: <span>{{data.status}}</span></div>
+      </div>
+      <div class="info-item">
+        <div>Gender: <span>{{data.gender}}</span></div>
+      </div>
+      <div class="info-item">
+        <div>Species: <span>{{data.species}}</span></div>
+      </div>
+    </div>
+
+    <div class="episode-list">
+      <span>Episodes:</span>
+      <div class="episode">
+        <div *ngFor="let ep of episodes">
+          <div id="episode">
+            {{ep.episode}} - {{ep.name}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
